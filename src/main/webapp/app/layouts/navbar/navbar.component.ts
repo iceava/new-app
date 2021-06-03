@@ -20,6 +20,8 @@ export class NavbarComponent implements OnInit {
   languages = LANGUAGES;
   openAPIEnabled?: boolean;
   version = '';
+  menu = false;
+  img = 'https://www.yorkgraphicdesigners.co.uk/wp-content/uploads/2020/04/coronavirus_logo-2.jpg';
 
   constructor(
     private loginService: LoginService,
@@ -39,6 +41,10 @@ export class NavbarComponent implements OnInit {
       this.inProduction = profileInfo.inProduction;
       this.openAPIEnabled = profileInfo.openAPIEnabled;
     });
+  }
+
+  togleMenu(): void {
+    this.menu = !this.menu;
   }
 
   changeLanguage(languageKey: string): void {
