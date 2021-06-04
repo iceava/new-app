@@ -1,0 +1,20 @@
+<nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-dark">
+  <a class="navbar-brand logo" routerLink="/">
+    <img [src]="img" alt="logo" />
+  </a>
+
+  <span class="row d-flex h-100 w-100 justify-content-center">
+    <a (click)="togleMenu()" class="text-muted ml-5 text-decoration-none"><h5>MENU</h5></a>
+    <span *ngIf="menu" class="column-10 d-flex justify-content-center ml-5 flex-wrap">
+      <a routerLink="/home" routerLinkActive="active" class="ml-3 text-light text-decoration-none">Home</a>
+      <a routerLink="/users" routerLinkActive="active" class="ml-3 text-light text-decoration-none">Users</a>
+      <a routerLink="/myroom" routerLinkActive="active" class="ml-3 mr-3 text-light text-decoration-none">My room</a>
+      <a routerLink="/contacts" routerLinkActive="active" class="mr-3 text-light text-decoration-none">Contcats</a>
+      <a routerLink="/anylinks" routerLinkActive="active" class="mr-3 text-light text-decoration-none">Any links</a>
+      <a routerLink="/newitem" routerLinkActive="active" class="mr-3 text-light text-decoration-none">New item</a>
+      <a routerLink="/feedback" routerLinkActive="active" class="text-light text-decoration-none">Feedback</a>
+    </span>
+  </span>
+
+  <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="isAuthenticated()"></div>
+</nav>
