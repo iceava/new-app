@@ -61,10 +61,10 @@ describe('Component Tests', () => {
 
       it('Should call Department query and add missing value', () => {
         const employee: IEmployee = { id: 456 };
-        const department: IDepartment = { id: 83059 };
+        const department: IDepartment = { id: 4430 };
         employee.department = department;
 
-        const departmentCollection: IDepartment[] = [{ id: 79567 }];
+        const departmentCollection: IDepartment[] = [{ id: 77105 }];
         spyOn(departmentService, 'query').and.returnValue(of(new HttpResponse({ body: departmentCollection })));
         const additionalDepartments = [department];
         const expectedCollection: IDepartment[] = [...additionalDepartments, ...departmentCollection];
@@ -82,7 +82,7 @@ describe('Component Tests', () => {
         const employee: IEmployee = { id: 456 };
         const manager: IEmployee = { id: 71581 };
         employee.manager = manager;
-        const department: IDepartment = { id: 45555 };
+        const department: IDepartment = { id: 34825 };
         employee.department = department;
 
         activatedRoute.data = of({ employee });

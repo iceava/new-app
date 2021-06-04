@@ -37,7 +37,7 @@
     "serviceDiscoveryType": false,
     "enableHibernateCache": true,
     "reactive": false,
-    "entities": ["Employee", "Job", "Region", "Country", "Location", "Department", "Task", "JobHistory"],
-    "lastLiquibaseTimestamp": 1622791762000
+    "entities": ["Employee", "Job", "Region", "Country", "Location", "Department", "Task", "JobHistory", "Person"],
+    "lastLiquibaseTimestamp": 1622808078000
   }
 }

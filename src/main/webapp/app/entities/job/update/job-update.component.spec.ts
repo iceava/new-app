@@ -46,10 +46,10 @@ describe('Component Tests', () => {
     describe('ngOnInit', () => {
       it('Should call Task query and add missing value', () => {
         const job: IJob = { id: 456 };
-        const tasks: ITask[] = [{ id: 10312 }];
+        const tasks: ITask[] = [{ id: 44230 }];
         job.tasks = tasks;
 
-        const taskCollection: ITask[] = [{ id: 62261 }];
+        const taskCollection: ITask[] = [{ id: 89930 }];
         spyOn(taskService, 'query').and.returnValue(of(new HttpResponse({ body: taskCollection })));
         const additionalTasks = [...tasks];
         const expectedCollection: ITask[] = [...additionalTasks, ...taskCollection];
@@ -84,7 +84,7 @@ describe('Component Tests', () => {
 
       it('Should update editForm', () => {
         const job: IJob = { id: 456 };
-        const tasks: ITask = { id: 88595 };
+        const tasks: ITask = { id: 13910 };
         job.tasks = [tasks];
         const employee: IEmployee = { id: 36201 };
         job.employee = employee;
